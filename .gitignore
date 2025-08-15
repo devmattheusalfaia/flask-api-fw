@@ -13,7 +13,6 @@ __pycache__/
 *.env
 *.local
 instance/
-config.py
 
 # Logs
 *.log
