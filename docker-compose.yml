@@ -1,0 +1,23 @@
+services:
+  web: # DEV: reload, volume, porta 5000
+    build: .
+    container_name: flask-app-dev
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./:/app
+    env_file:
+      - .env
+    environment:
+      FLASK_ENV: development
+      FLASK_DEBUG: "1"
+    command: flask run --debug --host 0.0.0.0 --port 5000
+
+  web_prod: # PROD: gunicorn, sem volume, porta 8000
+    build: .
+    container_name: flask-app-prod
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    command: gunicorn -w 2 -b 0.0.0.0:8000 wsgi:app

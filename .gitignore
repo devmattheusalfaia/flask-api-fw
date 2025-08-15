@@ -1,0 +1,40 @@
+# Ambiente virtual
+venv/
+ENV/
+env/
+
+# Arquivos Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Configurações locais
+*.env
+*.local
+instance/
+config.py
+
+# Logs
+*.log
+
+# Banco de dados SQLite
+*.sqlite3
+*.db
+
+# Cache e arquivos temporários
+.cache/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# IDEs e editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
